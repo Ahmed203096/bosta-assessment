@@ -9,6 +9,8 @@ This is a single-page React application that allows users to track shipments by 
 ✅ Error Handling – Displays user-friendly error messages for invalid tracking numbers
 ✅ API Integration – Fetches shipment details from a mock API
 ✅ Responsive Design – Works on mobile, tablet, and desktop
+✅ Performance Optimization – Implement lazy loading for assets or data, Optimize component rendering to ensure smooth performance, even with repeated searches.
+✅ Dark Mode – Include a toggle for light and dark modes,
 
 **Assume**
 -tracking contains only from Numbers
