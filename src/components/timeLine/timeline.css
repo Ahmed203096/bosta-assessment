@@ -11,6 +11,9 @@
     margin-bottom: 10px;
     margin-left: 2px;
 }
+.title-text{
+  color: var(--primary-color);
+}
 
 @media (min-width: 601px) {
   .container1 {
@@ -18,10 +21,6 @@
     display: flex;
     justify-content: space-around;
     padding-left: 12.5%;
-  }
-
-  .title-text{
-    color: var(--primary-color);
   }
 
   .container3 {
