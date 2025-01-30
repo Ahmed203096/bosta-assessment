@@ -10,7 +10,8 @@ This is a single-page React application that allows users to track shipments by 
 ✅ API Integration – Fetches shipment details from a mock API
 ✅ Responsive Design – Works on mobile, tablet, and desktop
 ✅ Performance Optimization – Implement lazy loading for assets or data, Optimize component rendering to ensure smooth performance, even with repeated searches.
-✅ Dark Mode – Include a toggle for light and dark modes,
+✅ Dark Mode – Include a toggle for light and dark modes.
+✅ Export – Adding Export button to export order status.
 
 **Assume**
 -tracking contains only from Numbers
@@ -19,8 +20,9 @@ This is a single-page React application that allows users to track shipments by 
 ✅ Frontend validation on tracking Number to contains only from Numbers
 
 **Tech Stack**
-React.js – Frontend Framework
-CSS (Styled Components / Bootstrap/React Bootstrap) – For styling
+- React.js – Frontend Framework
+- Axios – To fetch shipment details
+- CSS (Styled Components / Bootstrap/React Bootstrap) – For styling
 
 **Installation & Setup**
 1-Clone the Repository
@@ -31,7 +33,7 @@ CSS (Styled Components / Bootstrap/React Bootstrap) – For styling
 3-Run the Development Server
 "npm start"
 
- **API Integration**
+**API Integration**
 This project fetches shipment data using a mock API:"GET https://tracking.bosta.co/shipments/track/:trackingNumber"
 - Required Header: x-requested-by: Bosta
 - Sample Tracking Numbers: 36406704, 69171493, 7234258, 9442984, 1094442

@@ -1,23 +1,31 @@
-.en{
-    direction: ltr;
+.en {
+  direction: ltr;
 }
-.ar{
-    direction: rtl;
+.ar {
+  direction: rtl;
 }
 
-.btn-more{
-    border: 0;
-    background-color: transparent;
-    color: rgb(0, 152, 165);
+.btn-more {
+  border: 0;
+  background-color: transparent;
+  color: rgb(0, 152, 165);
+}
+
+.export-btn{
+    bottom: 5% !important;
+    left: 80%;
+    border-radius: 15px;
+    padding: 5px;
+    z-index: 5;
 }
 
 .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #FFF;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    }
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
