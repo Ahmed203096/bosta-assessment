@@ -1,0 +1,43 @@
+
+.status-container{
+    border: 1px solid #E4E7EC;
+    border-radius: 8px;
+    box-shadow: 0 4 4 0 #1D29390D;
+    width: 67vw;
+}
+
+.description{
+    border-bottom: 1px solid #E4E7EC;
+    padding: 16px;
+}
+
+.font-gray{
+    font-family: 'Rubik';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #667085;
+}
+.font-gray-lg{
+    font-family: 'Rubik';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #667085;
+}
+.font-black{
+    font-family: 'Rubik';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: black;
+}
+.font-blue{
+    font-family: 'Rubik';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: rgb(0, 152, 165);
+}
+
+

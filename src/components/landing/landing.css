@@ -1,0 +1,85 @@
+.landing-container{
+    width: 100;
+    min-height: 27% ;
+    height: fit-content;
+}
+
+.rectangle{
+    background-color: #F3FAFB;
+    width: 100%;
+    min-height: 310px;
+    height: 25%;
+    position: absolute;
+    top: 0px;
+}
+
+.landing-items-container{
+    position: relative;
+    top: 0px;
+    z-index: 2;
+}
+
+.landing-content{
+    width: 454px;
+}
+
+.search{
+    background-color: #E30613;
+    width: 60px !important;
+    height: 68px !important;
+}
+
+.landing-title{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#language-dropDown{
+    background-color: transparent;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    direction: rtl;
+    border: 0px;
+}
+
+#language-dropDown:hover{
+    color: #e30613;
+    border: 0px;
+}
+
+#language-dropDown::selection{
+    border: 0px;
+}
+
+select{
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid transparent;
+    padding: 2px;
+    cursor: pointer;
+}
+
+@keyframes example {
+    0%   { transform: rotate(10deg); }
+    10%  { transform: rotate(0deg); }
+    20%  { transform: rotate(-10deg); }
+    30%  { transform: rotate(20deg); }
+    40%  { transform: rotate(0deg); }
+    50%  { transform: rotate(-20deg); }
+    60%  { transform: rotate(0deg); }
+    70%  { transform: rotate(10deg); }
+    80%  { transform: rotate(0deg); }
+    90%  { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+
+.animate{
+    animation-name: example;
+    animation-duration: 1s;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center bottom;
+    
+}
