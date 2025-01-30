@@ -20,11 +20,9 @@
     padding-left: 12.5%;
   }
 
-  /* .title-text{
-    position: absolute;
-    left: -5%;
-    top: 100%;
-  } */
+  .title-text{
+    color: var(--primary-color);
+  }
 
   .container3 {
     width: 100%;

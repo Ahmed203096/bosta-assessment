@@ -13,4 +13,13 @@
   width: 100vw !important;
   height: 100vh !important;
   font-family: 'Cairo', sans-serif;
+  --body-color: white;
+  --secondary-color: #333;
+  --primary-color: black;
+  --land-color: #f3fafb;
+  --transition-speed: 0.3s;
+}
+
+body{
+  background-color: var(--body-color) !important;
 }
