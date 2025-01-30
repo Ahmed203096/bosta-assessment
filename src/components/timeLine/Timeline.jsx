@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./Timeline.css";
+import "./timeline.css";
 import { LanguageContext } from "../../context/LanguageContext";
 
 
