@@ -12,6 +12,7 @@
 :root{
   width: 100vw !important;
   height: 100vh !important;
+  overflow-x: hidden !important;
   font-family: 'Cairo', sans-serif;
   --body-color: white;
   --secondary-color: #333;

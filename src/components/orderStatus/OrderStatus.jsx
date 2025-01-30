@@ -34,7 +34,7 @@ export default function OrderStatus({ data }) {
           ) : (
             <>
               <p className="font-black">
-                {language == 'English'?"Arriving By":"سوف يصل طلبك بحلول"}
+                {language == 'English'?"Arriving By ":"سوف يصل طلبك بحلول "}
                 <span className="font-blue">
                   {formatDate(data.ScheduleDate)}
                 </span>

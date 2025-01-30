@@ -2,6 +2,7 @@
   width: 100;
   min-height: 27%;
   height: fit-content;
+  margin-bottom: 15%;
 }
 
 .rectangle {
@@ -133,5 +134,25 @@ select {
     overflow: hidden;
     visibility:hidden;
     transition: height 0.5s ease-in-out;
+  }
+  .landing-container{
+    margin-bottom: 5rem;
+  }
+}
+@media (min-width: 601px) {
+  .landing-items-container {
+    position: relative;
+    top: 0px;
+    z-index: 2;
+  }
+  .landing-container{
+    margin-bottom: 3rem;
+  }
+  .search-container{
+    position: relative;
+    padding: 1rem;
+    margin: 1rem;
+    visibility:visible;
+    height: 100%;
   }
 }
