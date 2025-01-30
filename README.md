@@ -10,6 +10,12 @@ This is a single-page React application that allows users to track shipments by 
 ✅ API Integration – Fetches shipment details from a mock API
 ✅ Responsive Design – Works on mobile, tablet, and desktop
 
+**Assume**
+-tracking contains only from Numbers
+
+**Extra Features**
+✅ Frontend validation on tracking Number to contains only from Numbers
+
 **Tech Stack**
 React.js – Frontend Framework
 CSS (Styled Components / Bootstrap/React Bootstrap) – For styling
