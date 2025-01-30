@@ -5,7 +5,7 @@ import { LanguageContext } from "../../context/LanguageContext";
 
 
 export default function OrderStatus({ data }) {
-  const [status, setStatus] = useState(data.CurrentStatus);
+  const [status, setStatus] = useState(data.CurrentStatus || null);
   const { language, changeLanguage } = useContext(LanguageContext);
   useEffect(() => {
     setStatus(data.CurrentStatus);
@@ -24,7 +24,7 @@ export default function OrderStatus({ data }) {
       <div className="status-container">
         <div className={`description ${language=="English"?"en":"ar"}`}>
           <p className="font-gray">{language=='English'?'Order':'رقم الشحنة'} #{data.TrackingNumber}</p>
-          {status.state == "Delivered" || status.state == " Returned" ? (
+          {status && (status.state == "Delivered" || status.state == " Returned") ? (
             <>
               <p className="font-black">{language == 'English'?status.state:"تم الاستلام"}</p>
               <p className="font-gray-lg">

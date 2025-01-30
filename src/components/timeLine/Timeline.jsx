@@ -4,14 +4,15 @@ import { LanguageContext } from "../../context/LanguageContext";
 
 
 export default function Timeline({ status }) {
-  const [state, setState] = useState(status.state);
+  const prop = status || {state:null,timestamp:null};
+  const [state, setState] = useState(prop.state || null);
   const { language, changeLanguage } = useContext(LanguageContext);
 
   let flag = [1, 0, 0, 0];
   useEffect(() => {
-    setState(status.state);
+    setState(prop.state);
   }, [status]);
-  let timestamp = [status["timestamp"], null, null, null];
+  let timestamp = [prop["timestamp"], null, null, null];
   if (state == "Delivered") {
     flag = [1, 1, 1, 1];
     timestamp = [null, null, null, status["timestamp"]];

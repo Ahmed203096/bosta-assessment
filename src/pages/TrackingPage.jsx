@@ -11,12 +11,16 @@ export default function TrackingPage() {
 
   const handleTrackingData = (data) => {
     setFlag(true);
-    setTrackingData(data.result);
+    if(data){ 
+      setTrackingData(data.result);
+    }else{
+      setTrackingData(null);
+    }
   };
   return (
     <>
       <Landing onTrackingData={handleTrackingData}></Landing>
-      {trackingData ? (
+      {trackingData && !trackingData["error"] ? (
         <>
           <OrderStatus data={trackingData}></OrderStatus>
           <TrackingDetails data={trackingData}></TrackingDetails>
