@@ -37,6 +37,10 @@ export default function Landing({ onTrackingData }) {
       alert("Please enter a tracking number.");
       return;
     }
+    if (/[a-zA-Z]/.test(trackingNo)) {
+      alert("Please enter a valid tracking number.");
+      return;
+    }
     try {
       const URL = `https://tracking.bosta.co/shipments/track/${trackingNo}`;
       const response = await fetch(URL, {
