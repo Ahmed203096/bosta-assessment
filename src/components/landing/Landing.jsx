@@ -15,7 +15,7 @@ export default function Landing({ onTrackingData }) {
   const { language, changeLanguage } = useContext(LanguageContext);
   const [trackingNo, setTrackingNo] = useState("");
   const [animate, setAnimate] = useState(false);
-  const [height, setHeight] = useState(100);
+  const [height, setHeight] = useState(0);
   const [darkmode, setDarkMode] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
