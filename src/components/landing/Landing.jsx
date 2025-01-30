@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import axios from "axios";
 import "./landing.css";
 import pin from "../../images/Pin.png";
 import logo_ar from "../../images/logo-arabic.png";
@@ -10,9 +11,11 @@ import sun from "../../images/sun.png";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { LanguageContext } from "../../context/LanguageContext";
+import { TrackingCacheContext } from "../../context/TrackingCacheContext";
 
 export default function Landing({ onTrackingData }) {
   const { language, changeLanguage } = useContext(LanguageContext);
+  const { cache, updateCache } = useContext(TrackingCacheContext);
   const [trackingNo, setTrackingNo] = useState("");
   const [animate, setAnimate] = useState(false);
   const [height, setHeight] = useState(0);
@@ -20,7 +23,6 @@ export default function Landing({ onTrackingData }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    console.log(screenWidth);
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
     };
@@ -33,6 +35,7 @@ export default function Landing({ onTrackingData }) {
 
   const fetchData = async () => {
     setHeight(0);
+
     if (!trackingNo) {
       alert("Please enter a tracking number.");
       return;
@@ -41,30 +44,22 @@ export default function Landing({ onTrackingData }) {
       alert("Please enter a valid tracking number.");
       return;
     }
+    setAnimate(true);
+    setTimeout(() => setAnimate(false), 2000);
+    if (cache[trackingNo]) {
+      onTrackingData({ result: cache[trackingNo] });
+      return;
+    }
     try {
       const URL = `https://tracking.bosta.co/shipments/track/${trackingNo}`;
-      const response = await fetch(URL, {
-        method: "GET",
-        headers: {
-          "x-requested-by": "Bosta",
-        },
+      const response = await axios.get(URL, {
+        headers: { "x-requested-by": "Bosta" },
       });
 
-      if (!response.ok) {
-        onTrackingData(null);
-      }
-      setAnimate(true);
-      setTimeout(() => {
-        setAnimate(false);
-      }, 2000);
-
-      const result = await response.json();
-      console.log("Fetched Data:", result);
-
-      onTrackingData({ result });
+      updateCache(trackingNo, response.data);
+      onTrackingData({ result: response.data });
     } catch (error) {
       onTrackingData(null);
-      console.error("Error fetching data:", error);
     }
   };
 
@@ -82,17 +77,16 @@ export default function Landing({ onTrackingData }) {
     if (screenWidth <= 600) setHeight(height === 100 ? 0 : 100);
   };
   const toggleDarkMode = () => {
-    if(darkmode){
+    if (darkmode) {
       document.documentElement.style.setProperty("--body-color", "white");
       document.documentElement.style.setProperty("--primary-color", "black");
-      document.documentElement.style.setProperty("--secondary-color", "#667085");
+      document.documentElement.style.setProperty("--secondary-color","#667085");
       document.documentElement.style.setProperty("--land-color", "#f3fafb");
-    }else{
+    } else {
       document.documentElement.style.setProperty("--body-color", "#2b2b2b");
       document.documentElement.style.setProperty("--primary-color", "white");
       document.documentElement.style.setProperty("--secondary-color", "#ddd");
       document.documentElement.style.setProperty("--land-color", "#393a3b");
-
     }
     setDarkMode(darkmode === true ? false : true);
   };

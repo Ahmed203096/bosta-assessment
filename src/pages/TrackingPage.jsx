@@ -11,7 +11,6 @@ export default function TrackingPage() {
   const [trackingData, setTrackingData] = useState(null);
   const [flag, setFlag] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  console.log("tracking data from parent => ", trackingData);
 
   const handleClick = () => {
     setIsLoaded(true);

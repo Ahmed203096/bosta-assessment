@@ -10,11 +10,11 @@ export default function InvalidNo({ lang }) {
       <h1 className="heading">{language == "English" ? "NOT FOUND" : "لم يتم العثور على شحنتك"}</h1>
       <h3 className="c-text">
         {language == "English"
-          ? "Looks like you enterd an invalid tracking number"
+          ? "Looks Like You Enterd an Invalid Tracking Number"
           : "يبدو ان رقم التتبع غير صحيح"}
       </h3>
       <h3 className="c-text">
-        {language == "English" ? "Please try valid tracking number" : "برجاء إدخال رقم تتبع صحيح والمحاولة مره اخري"}
+        {language == "English" ? "Please Try a Valid Tracking Number" : "برجاء إدخال رقم تتبع صحيح والمحاولة مره اخري"}
       </h3>
     </div>
   );
